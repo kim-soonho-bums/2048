@@ -26,67 +26,67 @@
         <Button android:text="1"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-        ></Button>
-        <Button android:text="1"
+                android:id="@+id/gb1"></Button>
+        <Button android:text="2"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-        ></Button>
-        <Button android:text="1"
+                android:id="@+id/gb2"></Button>
+        <Button android:text="3"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-        ></Button>
-        <Button android:text="1"
+                android:id="@+id/gb3"></Button>
+        <Button android:text="4"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-        ></Button>
-        <Button android:text="1"
+                android:id="@+id/gb4"></Button>
+        <Button android:text="5"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-        ></Button>
-        <Button android:text="1"
+                android:id="@+id/gb5"></Button>
+        <Button android:text="6"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-        ></Button>
-        <Button android:text="1"
+                android:id="@+id/gb6"></Button>
+        <Button android:text="7"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-        ></Button>
-        <Button android:text="1"
+                android:id="@+id/gb7"></Button>
+        <Button android:text="8"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-        ></Button>
-        <Button android:text="1"
+                android:id="@+id/gb8"></Button>
+        <Button android:text="9"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-        ></Button>
-        <Button android:text="1"
+                android:id="@+id/gb9"></Button>
+        <Button android:text="10"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-        ></Button>
-        <Button android:text="1"
+                android:id="@+id/gb10"></Button>
+        <Button android:text="11"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-        ></Button>
-        <Button android:text="1"
+                android:id="@+id/gb11"></Button>
+        <Button android:text="12"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-        ></Button>
-        <Button android:text="1"
+                android:id="@+id/gb12"></Button>
+        <Button android:text="13"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-        ></Button>
-        <Button android:text="1"
+                android:id="@+id/gb13"></Button>
+        <Button android:text="14"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-        ></Button>
-        <Button android:text="1"
+                android:id="@+id/gb14"></Button>
+        <Button android:text="15"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-        ></Button>
-        <Button android:text="1"
+                android:id="@+id/gb15"></Button>
+        <Button android:text="16"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-        ></Button>
+                android:id="@+id/gb16"></Button>
 
     </android.support.v7.widget.GridLayout>
 </android.support.constraint.ConstraintLayout>
