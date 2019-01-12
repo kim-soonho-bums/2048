@@ -97,7 +97,7 @@
             android:id="@+id/button2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/gridLayout"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" android:onClick="leftButtonClicked"/>
     <Button
             android:text="ri"
             android:layout_width="40dp"
@@ -106,20 +106,20 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@+id/gridLayout"
             app:layout_constraintBottom_toBottomOf="parent"
-    />
+            android:onClick="rightButtonClicked"/>
     <Button
-            android:text="bo"
+            android:text="down"
             android:layout_width="75dp"
             android:layout_height="40dp"
             android:id="@+id/button4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/gridLayout"/>
+            app:layout_constraintTop_toBottomOf="@+id/gridLayout" android:onClick="downButtonClicked"/>
     <Button
-            android:text="to"
+            android:text="up"
             android:layout_width="75dp"
             android:layout_height="40dp"
             android:id="@+id/button5" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/gridLayout"/>
+            app:layout_constraintBottom_toTopOf="@+id/gridLayout" android:onClick="upButtonClicked"/>
 </android.support.constraint.ConstraintLayout>
