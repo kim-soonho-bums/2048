@@ -15,7 +15,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/gridLayout"/>
+            app:layout_constraintBottom_toTopOf="@+id/button5" app:layout_constraintVertical_bias="0.298"
+    />
     <android.support.v7.widget.GridLayout
             android:layout_width="300dp"
             android:layout_height="300dp"
@@ -89,4 +90,36 @@
                 android:id="@+id/gb16"></Button>
 
     </android.support.v7.widget.GridLayout>
+    <Button
+            android:text="le"
+            android:layout_width="40dp"
+            android:layout_height="75dp"
+            android:id="@+id/button2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/gridLayout"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+            android:text="ri"
+            android:layout_width="40dp"
+            android:layout_height="75dp"
+            android:id="@+id/button3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gridLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+    />
+    <Button
+            android:text="bo"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:id="@+id/button4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gridLayout"/>
+    <Button
+            android:text="to"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:id="@+id/button5" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/gridLayout"/>
 </android.support.constraint.ConstraintLayout>
