@@ -1,21 +1,19 @@
 package study.bums.soonho.study2048
 
-import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_game_main.*
-import kotlin.random.Random
 
 class GameMain : AppCompatActivity() {
 
     private fun createRandom2() {
-        var buttons = getButtonList()
+        val buttons = getButtonList()
         while (true) {
-            var randIndex = (0..(buttons.size-1)).random()
-            var button = buttons[randIndex]
-            var buttonString = button.text
+            val randIndex = (0..(buttons.size-1)).random()
+            val button = buttons[randIndex]
+            val buttonString = button.text
             if(buttonString.equals("")){
                 button.text = "2"
                 break
@@ -26,14 +24,14 @@ class GameMain : AppCompatActivity() {
     }
 
     private fun resetButtonText() {
-        var buttonList = getButtonList()
+        val buttonList = getButtonList()
         buttonList.forEach {
             it.text = ""
         }
     }
 
     private fun getButtonList(): ArrayList<Button> {
-        var buttonList:ArrayList<Button> = ArrayList()
+        val buttonList:ArrayList<Button> = ArrayList()
         buttonList.add(gb1)
         buttonList.add(gb2)
         buttonList.add(gb3)
@@ -82,10 +80,10 @@ class GameMain : AppCompatActivity() {
 
     private fun acceptEvent(direction: Direction) {
 
-        var buttonList = getButtonList()
+        val buttonList = getButtonList()
 
-        var isVertical:Boolean
-        var isReversed:Boolean
+        val isVertical:Boolean
+        val isReversed:Boolean
         when(direction){
             Direction.UP, Direction.DOWN -> isVertical = true
             Direction.LEFT, Direction.RIGHT -> isVertical = false
@@ -95,8 +93,8 @@ class GameMain : AppCompatActivity() {
             Direction.DOWN, Direction.RIGHT -> isReversed = false
         }
 
-        var start:List<Int>
-        var calc:Int
+        val start:List<Int>
+        val calc:Int
         if(isVertical){
             if(isReversed){
                 start = listOf(1,2,3,4)
@@ -117,22 +115,22 @@ class GameMain : AppCompatActivity() {
 
         // line repeat
         for(l in 0..3){
-            var added:ArrayList<Int> = ArrayList()
+            val added:ArrayList<Int> = ArrayList()
             // cell repeat
             for(c in 1..3){
-                var index:Int = (start[l] + (calc*c) - 1)
-                var button = buttonList[index]
-                var numString:String = button.text.toString()
+                val index:Int = (start[l] + (calc*c) - 1)
+                val button = buttonList[index]
+                val numString:String = button.text.toString()
                 if(numString.equals("")){
                     // has nothing
                     continue
                 } else {
-                    var num:Int = numString.toInt()
+                    val num:Int = numString.toInt()
                     // moving repeat
                     for(t in (c-1) downTo 0){
-                        var moveIndex:Int = (start[l] + (calc*t) - 1)
-                        var moveButton = buttonList[moveIndex]
-                        var moveString = moveButton.text.toString()
+                        val moveIndex:Int = (start[l] + (calc*t) - 1)
+                        val moveButton = buttonList[moveIndex]
+                        val moveString = moveButton.text.toString()
                         if(moveString.equals("") && t != 0){
                             // no number at target and target is not the last widget
                             continue
@@ -143,17 +141,15 @@ class GameMain : AppCompatActivity() {
                         } else {
                             // has number at target
 
-                            if(numString.equals(moveString)){
+                            if(numString.equals(moveString) && !added.contains(t)){
                                 // same number
-                                if(!added.contains(t)) {
-                                    // target is added widget
-                                    button.text = ""
-                                    var moveInt: Int = moveString.toInt()
-                                    var plusString = (moveInt + num).toString()
-                                    moveButton.text = plusString
-                                    added.add(t)
-                                    break
-                                }
+                                // target is added widget
+                                button.text = ""
+                                val moveInt: Int = moveString.toInt()
+                                val plusString = (moveInt + num).toString()
+                                moveButton.text = plusString
+                                added.add(t)
+                                break
                             }
 
                             // target is added widget
